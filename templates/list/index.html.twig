@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        {{ encore_entry_script_tags('popup') }}
+    {% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    td { padding: 10px; text-align: center; border: 1px solid #ddd; color: #f4f4f4; }
+    th { padding: 26px; text-align: center; border: 1px solid #a25f5f; background-color: #ead07f; }
+    
+</style>
+
+<div class="example-wrapper">
+    <h1 class="text-center text-white text-2xl p-10 font-bold">Liste des Ordinateurs disponibles</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th>Modèle</th>
+                <th>Je resérve ?</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ordinateur in ordinateurs %}
+                <tr>
+                    <td>{{ ordinateur.marque }}</td>  
+                    <td>{{ ordinateur.modèle }}</td> 
+                    <td>
+                            <button id="reserve-button" type="button" class="rounded-[20px] px-[22px] py-[10px] border-t border-b hover:bg-[#ead07f] hover:text-black">Réserver</button>
+                        </form>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">Aucun produit trouvé.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -42,14 +42,10 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    .addEntry('galery', './assets/galery.js')
-    .addEntry('modal', './assets/modal.js')
-    .addEntry('statistic', './assets/statistic.js')
-    .addEntry('cropperjs', './assets/cropper.js')
-    .addEntry('formPicture', './assets/formPicture.js')
-    .addEntry('navbar', './assets/navbar.js')
-    .addEntry('newsletter', './assets/newsletter.js')
-    .addEntry('intermediatePage', './assets/intermediatePage.js')
+    
+    .addEntry('popup', './assets/popup.js')
+
+    
 
 
 

@@ -26,6 +26,9 @@ class SecurityController extends AbstractController
     #[Route('/logout', name: 'app_logout') ]
     public function logout(): void
     {
+        //$de = "deconnexidd";
+        //var_dump($de);
+        //die();
         // controller can be blank: it will never be called!
         $this->redirectToRoute('app_home');
     }
